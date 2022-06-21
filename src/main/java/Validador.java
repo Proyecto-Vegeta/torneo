@@ -6,7 +6,7 @@ public class Validador {
             if (eleccion > 0 && eleccion < valorMaximo + 1) {
                 error = false;
             } else {
-                System.out.println("ERROR: Debe ingresar un numero entre 0 y " + valorMaximo);
+                System.out.println("ERROR: Debe ingresar un numero entre 1 y " + valorMaximo);
                 error = true;
             }
         } catch (NumberFormatException exception) {
