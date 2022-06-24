@@ -10,15 +10,14 @@ public class Registrador {
         do {
             System.out.print("Nombre: ");
             String nombre = scanner.nextLine();
-            error = valStr.buscarError(nombre, 21)
+            error = valStr.buscarError(nombre, 21);
             nuevoLuchador.nombre = nombre;
-        } while (!error);
+        } while (error);
         do {
             System.out.println("Tipo: ");
             System.out.println("1.- Boxeador ");
             System.out.println("2.- Yudoka ");
-            System.out.println("3.- Tirador ");
-            System.out.println("");
+            System.out.println("3.- Tirador \n");
             System.out.print("Opcion: ");
             String tipo = scanner.nextLine();
             error = valInt.buscarError(tipo, 3);

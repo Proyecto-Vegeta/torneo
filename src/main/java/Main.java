@@ -15,8 +15,7 @@ public class Main {
                 System.out.println("1.- Agregar luchador");
                 System.out.println("2.- Borrar luchador");
                 System.out.println("3.- Listar luchadores");
-                System.out.println("4.- Salir");
-                System.out.println("");
+                System.out.println("4.- Salir\n");
                 System.out.print("Opcion: ");
                 opcion = scanner.nextLine();
                 ValidadorEnteros val = new ValidadorEnteros();
@@ -35,8 +34,8 @@ public class Main {
             if (opcion.equals("3")) {
                 System.out.println("Nombre \t\t Tipo \t\t Fuerza \t\t Resistencia \t\t Destreza");
                 for (Luchador luchador : listaLuchadores.values()) {
-                    System.out.println(luchador.nombre() + "\t\t" + luchador.tipo() + "\t\t" + luchador.fuerza()
-                            + "\t\t" + luchador.resistencia() + "\t\t"luchador.destreza());
+                    System.out.println(luchador.nombre + "\t\t" + luchador.tipo + "\t\t" + luchador.fuerza
+                            + "\t\t" + luchador.resistencia + "\t\t" + luchador.destreza);
                 }
             }
         } while (!opcion.equals("4"));
