@@ -1,4 +1,4 @@
-# Torneo
+# com.vegeta.Torneo
 Proyecto para aprender sobre objetos y colecciones
 
 ## Temas
@@ -56,7 +56,7 @@ Boton derecho -> GIT -> New Branch
 Al comenzar el programa, deberá mostrarse el siguiente menu:
 
 ```bash
-Torneo
+com.vegeta.Torneo
 1.- Agregar luchador
 2.- Borrar luchador
 3.- Listar luchadores
@@ -107,7 +107,7 @@ Vegeta         Yudoka           9             10             8
 
 Para crear esta lista puede ser muy util el uso de tabuladores, de esta manera:
 
-```java
+```
 System.out.println(Nombre\t\tTipo\t\tFuerza\t\tResistencia\t\tDestreza);
 for(Peleador peleador: peleadores){
   System.out.println(peleador.getNombre() + "\t\t" +peleador.getTipo() +"\t\t" + peleador.getFuerza() 
@@ -134,7 +134,7 @@ Cuando el usuario seleccione esta opción, el sistema preguntará por el nombre 
 
 Para ello, cada peleador implementará un método:
 
-```java
+```
 public int pelear() {}
 ```
 
@@ -151,7 +151,7 @@ El programa decidirá como ganador al que tenga mayor puntaje. Si tienen el mism
 
 
 
-### Tercera etapa: Torneo
+### Tercera etapa: com.vegeta.Torneo
 
 No se debe iniciar la tercera etapa, a menos que se hubiera completado la segunda con éxito, esto es decir, el Pull Request fue aprobado por el maestro y mergeado.
 
@@ -160,7 +160,7 @@ Crearemos una nueva rama llamada "torneo".
 Crearemos una nueva opción:
 
 ```bash
-6.- Torneo
+6.- com.vegeta.Torneo
 ```
 
 Esta etapa solo se aceptará si hay al menos 4 peleadores creados. De haber más se ignorarán.

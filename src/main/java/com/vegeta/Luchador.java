@@ -1,6 +1,8 @@
+package com.vegeta;
+
 public class Luchador {
 
-    private String nombre;
+    private final String nombre;
     private int fuerza;
     private int destreza;
 

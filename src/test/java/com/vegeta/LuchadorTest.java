@@ -1,3 +1,5 @@
+package com.vegeta;
+
 import org.junit.Assert;
 import org.junit.Test;
 

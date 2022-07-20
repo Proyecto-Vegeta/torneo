@@ -1,8 +1,11 @@
+package com.vegeta;
+
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 
 import java.util.List;
+import java.util.Map;
 
 public class TorneoTest {
 
@@ -19,7 +22,7 @@ public class TorneoTest {
         Torneo torneo = new Torneo();
         torneo.nuevoLuchador("luchador1");
         torneo.nuevoLuchador("luchador2");
-        List<Luchador> lista = torneo.getLuchadores();
+        Map<String, Luchador> lista = torneo.getLuchadores();
         Assert.assertNotNull(lista);
     }
 
