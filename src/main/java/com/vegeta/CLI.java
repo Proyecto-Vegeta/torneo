@@ -1,11 +1,21 @@
+package com.vegeta;
+
+import java.io.InputStream;
+import java.io.PrintStream;
 import java.util.Scanner;
 
 public class CLI {
 
-    private Scanner scanner = new Scanner(System.in);
+    private final PrintStream out;
+    private final Scanner scanner;
 
     public void imprimir(String texto) {
-        System.out.println(texto);
+        out.println(texto);
+    }
+
+    public CLI(InputStream in, PrintStream out) {
+        this.scanner = new Scanner(in);
+        this.out = out;
     }
 
     public String preguntar(String texto, Validador validador) {
