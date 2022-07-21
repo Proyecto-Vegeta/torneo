@@ -9,7 +9,7 @@ public class Torneo {
     private final Map<String, Luchador> luchadores = new HashMap<>();
 
     public Luchador nuevoLuchador(String nombre) {
-        Luchador luchador = new Luchador(nombre);
+        Luchador luchador = new Yudoka(nombre);
         luchadores.put(nombre.toUpperCase(Locale.ROOT), luchador);
         return luchador;
     }
