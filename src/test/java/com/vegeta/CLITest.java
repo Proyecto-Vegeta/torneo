@@ -17,4 +17,17 @@ public class CLITest {
         cli.imprimir("Menu principal:");
         assertEquals("Menu principal:\n", pantalla.impreso());
     }
+
+    @Test
+    public void debe_preguntar_algo() {
+        Teclado in = new Teclado();
+        PrintComparable pantalla = new PrintComparable();
+        PrintStream out=new PrintStream(pantalla);
+        CLI cli = new CLI(in, out);
+        in.escribir("Leo");
+        Validador validador = new Validador();
+        String respuesta = cli.preguntar("Nombre:", validador);
+        assertEquals("Nombre:\n", pantalla.impreso());
+        assertEquals("Leo", respuesta);
+    }
 }
