@@ -15,6 +15,6 @@ public class CLITest {
         PrintStream out=new PrintStream(pantalla);
         CLI cli = new CLI(in, out);
         cli.imprimir("Menu principal:");
-        assertEquals("Menu principal:", pantalla.impreso());
+        assertEquals("Menu principal:\n", pantalla.impreso());
     }
 }
