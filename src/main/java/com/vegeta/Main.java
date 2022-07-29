@@ -10,5 +10,6 @@ public class Main {
         String nombre = cli.preguntar("Nombre del luchador:", new Validador());
         torneo.nuevoLuchador(nombre);
         cli.imprimir("Nuevo luchador:" + torneo.getLuchador(nombre).getNombre());
+
     }
 }
