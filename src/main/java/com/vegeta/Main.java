@@ -8,6 +8,9 @@ public class Main {
         CLI cli = new CLI(System.in, System.out);
         Torneo torneo = new Torneo();
         String opcion = "0";
+        
+        
+        cli.imprimir("com.vegeta.Torneo");
 
         do {
             cli.imprimir("Seleccione una opcion:/n");
