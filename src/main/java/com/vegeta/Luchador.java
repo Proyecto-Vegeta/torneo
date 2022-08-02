@@ -1,6 +1,6 @@
 package com.vegeta;
 
-public abstract class Luchador implements pelear {
+public abstract class Luchador implements Pelear {
 
     private final String nombre;
     private int fuerza;

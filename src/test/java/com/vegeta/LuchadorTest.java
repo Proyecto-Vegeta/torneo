@@ -39,4 +39,12 @@ public class LuchadorTest {
         Tirador tirador = new Tirador("Tirador");
         Assert.assertEquals(3, tirador.getTipo());
     }
+    @Test
+    public void luchador_debe_dar_puntaje() {
+        Boxeador boxeador = new Boxeador("boxear");
+        boxeador.setFuerza(1);
+        boxeador.setresistencia(1);
+        boxeador.setDestreza(1);
+        Assert.assertEquals(3, boxeador.pelear());
+    }
 }
