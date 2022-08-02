@@ -10,4 +10,11 @@ public class Tirador extends Luchador{
     public int getTipo() {
         return 3;
     }
+
+
+    @Override
+    public int pelear(){
+        return 2*getDestreza()+getFuerza();
+
+    }
 }

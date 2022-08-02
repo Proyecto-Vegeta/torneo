@@ -1,6 +1,6 @@
 package com.vegeta;
 
-public abstract class Luchador {
+public abstract class Luchador implements Pelear {
 
     private final String nombre;
     private int fuerza;
@@ -36,5 +36,7 @@ public abstract class Luchador {
     public void setresistencia(int resistencia) { this.resistencia = resistencia; }
 
     public int getresistencia() {return resistencia;}
-    }
+
+    public abstract int pelear();
+}
 
