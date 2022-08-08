@@ -3,6 +3,7 @@ package com.vegeta;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Scanner;
 
 public class Torneo {
 
@@ -20,5 +21,14 @@ public class Torneo {
 
     public Luchador getLuchador(String nombre) {
         return luchadores.get(nombre.toUpperCase(Locale.ROOT));
+    }
+    public Luchador BorrarLuchador (String Nombre) {
+        Map<String, Luchador> listaluchadores = new HashMap<String, Luchador>();
+        boolean error;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Nombre");
+        Nombre = scanner.nextLine();
+        listaluchadores.remove(Nombre.toUpperCase());
+        return null;
     }
 }
