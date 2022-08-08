@@ -5,6 +5,10 @@ import static java.lang.Integer.parseInt;
 public class Main {
     static Torneo torneo = new Torneo();
     static CLI cli = new CLI(System.in, System.out);
+    private static ValidadorMenu validadorMenu = new ValidadorMenu();
+    private static ValidadorTipo validadorTipo = new ValidadorTipo();
+    private static ValidadorNumerico validadorNumerico = new ValidadorNumerico();
+    private static ValidadorNombre validadorNombre = new ValidadorNombre();
     public static void main(String[] args) {
         int opcion = menuPrincipal();
         if (opcion==1) {
@@ -23,13 +27,16 @@ public class Main {
             cli.imprimir("4. Salir/n");
             cli.imprimir("5. Pelear/n");
             cli.imprimir("6. Torneo/n/n");
-            opcion = cli.preguntar("Opcion: ", new Validador());
-        } while (parseInt(opcion) != 4);
+            opcion = cli.preguntar("Opcion: ", validadorMenu);
+        } while (parseInt(opcion) != 4 || !validadorMenu.validar(opcion));
         return parseInt (opcion);
     }
 
     public static void nuevoLuchador() {
-        String nombre = cli.preguntar("Nombre del luchador:", new Validador());
+        String nombre;
+        do {
+            nombre = cli.preguntar("Nombre del luchador:", validadorNombre);
+        } while (!validadorNombre.validar(nombre));
         torneo.nuevoLuchador(nombre);
         cli.imprimir("Nuevo luchador:" + torneo.getLuchador(nombre).getNombre());
     }
