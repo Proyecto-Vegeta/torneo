@@ -26,6 +26,16 @@ public class TorneoTest {
         Assert.assertNotNull(lista);
     }
 
+    @Test
+    public void debe_borrar_un_luchador() {
+        Torneo torneo = new Torneo();
+        torneo.nuevoLuchador("luchador1");
+        Torneo borrarLuchador = new Torneo();
+        Map<String, Luchador> lista = borrarLuchador.getLuchadores();
+        Assert.assertNotNull(lista);
+
+    }
+
     @Ignore
     @Test
     public void debe_devolver_un_lucahdor_creado() {
