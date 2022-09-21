@@ -1,6 +1,6 @@
 package com.vegeta;
 
-import org.junit.Assert;
+import static org.junit.Assert.*;
 import org.junit.Ignore;
 import org.junit.Test;
 
@@ -13,8 +13,8 @@ public class TorneoTest {
     public void debe_crear_un_luchador_con_un_nombre() {
         Torneo torneo = new Torneo();
         Luchador luchador = torneo.nuevoLuchador("nombre");
-        Assert.assertNotNull(luchador);
-        Assert.assertEquals("nombre", luchador.getNombre());
+        assertNotNull(luchador);
+        assertEquals("nombre", luchador.getNombre());
     }
 
     @Test
@@ -23,7 +23,7 @@ public class TorneoTest {
         torneo.nuevoLuchador("luchador1");
         torneo.nuevoLuchador("luchador2");
         Map<String, Luchador> lista = torneo.getLuchadores();
-        Assert.assertNotNull(lista);
+        assertNotNull(lista);
     }
 
     @Ignore
@@ -33,5 +33,15 @@ public class TorneoTest {
         torneo.nuevoLuchador("luchador1");
         torneo.nuevoLuchador("luchador2");
         Luchador luchador = torneo.getLuchador("lucahdor2");
+    }
+
+    @Test
+    public void debe_borrar_un_luchador() {
+        Torneo torneo = new Torneo();
+        torneo.nuevoLuchador("luchador1");
+        torneo.nuevoLuchador("luchador2");
+        torneo.borrarLuchador("luchador1");
+        Map<String, Luchador> lista = torneo.getLuchadores();
+        assertEquals(1, lista.size());
     }
 }
