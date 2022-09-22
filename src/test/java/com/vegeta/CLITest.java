@@ -25,7 +25,7 @@ public class CLITest {
         PrintStream out=new PrintStream(pantalla);
         CLI cli = new CLI(in, out);
         in.escribir("Leo");
-        Validador validador = new Validador();
+        Validador validador = new ValidadorNombre();
         String respuesta = cli.preguntar("Nombre:", validador);
         assertEquals("Nombre:\n", pantalla.impreso());
         assertEquals("Leo", respuesta);
