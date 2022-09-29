@@ -21,4 +21,8 @@ public class Torneo {
     public Luchador getLuchador(String nombre) {
         return luchadores.get(nombre.toUpperCase(Locale.ROOT));
     }
+
+    public void borrarLuchador(String nombre) {
+        luchadores.remove(nombre.toUpperCase(Locale.ROOT));
+    }
 }
