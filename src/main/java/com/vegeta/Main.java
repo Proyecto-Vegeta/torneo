@@ -7,7 +7,7 @@ public class Main {
     static CLI cli = new CLI(System.in, System.out);
     private static ValidadorMenu validadorMenu = new ValidadorMenu();
     private static ValidadorTipo validadorTipo = new ValidadorTipo();
-    private static ValidadorNumerico validadorNumerico = new ValidadorNumerico();
+    private static ValidadorNumerico validadorNumerico = new ValidadorNumerico(10);
     private static ValidadorNombre validadorNombre = new ValidadorNombre();
     public static void main(String[] args) {
         int opcion = menuPrincipal();

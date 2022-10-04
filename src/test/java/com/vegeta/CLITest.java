@@ -15,7 +15,7 @@ public class CLITest {
         PrintStream out=new PrintStream(pantalla);
         CLI cli = new CLI(in, out);
         cli.imprimir("Menu principal:");
-        assertEquals("Menu principal:\n", pantalla.impreso());
+        assertEquals("Menu principal:\r\n", pantalla.impreso());
     }
 
     @Test
@@ -27,7 +27,7 @@ public class CLITest {
         in.escribir("Leo");
         Validador validador = new ValidadorNombre();
         String respuesta = cli.preguntar("Nombre:", validador);
-        assertEquals("Nombre:\n", pantalla.impreso());
+        assertEquals("Nombre:\r\n", pantalla.impreso());
         assertEquals("Leo", respuesta);
     }
 }
