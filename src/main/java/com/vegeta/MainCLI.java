@@ -2,7 +2,7 @@ package com.vegeta;
 
 import static java.lang.Integer.parseInt;
 
-public class Main {
+public class MainCLI {
     static Torneo torneo = new Torneo();
     static CLI cli = new CLI(System.in, System.out);
     public static void main(String[] args) {
