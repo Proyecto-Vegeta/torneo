@@ -5,5 +5,3 @@ services:
     image: torneo
     ports:
       - "8080:8080"
-  mysql:
-    image: mysql
