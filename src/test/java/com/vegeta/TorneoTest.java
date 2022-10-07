@@ -26,7 +26,7 @@ public class TorneoTest {
         Assert.assertNotNull(lista);
     }
 
-    @Ignore
+
     @Test
     public void debe_devolver_un_lucahdor_creado() {
         Torneo torneo = new Torneo();

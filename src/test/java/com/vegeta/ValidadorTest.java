@@ -37,6 +37,16 @@ public class ValidadorTest {
     @Test
     public void debe_ser_entre_1_y_el_maximo() {
         Validador validador = new ValidadorNumerico(10);
+        assertTrue(validador.validar("6"));
+    }
+    @Test
+    public void debe_ser_entre_1_y_el_valorMaximo6() {
+        Validador validador = new ValidadorMenu();
         assertTrue(validador.validar("5"));
+    }
+    @Test
+    public void debe_ser_entre_1_y_el_valorMaximo3() {
+        Validador validador = new ValidadorTipo();
+        assertTrue(validador.validar("3"));
     }
 }

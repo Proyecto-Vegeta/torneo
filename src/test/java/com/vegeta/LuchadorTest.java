@@ -23,7 +23,6 @@ public class LuchadorTest {
         luchador.setresistencia(1);
         Assert.assertEquals(1, luchador.getresistencia());
     }
-
     @Test
     public void un_luchador_tipo_boxeador() {
         Boxeador boxeador = new Boxeador("Boxear");
@@ -40,11 +39,19 @@ public class LuchadorTest {
         Assert.assertEquals(3, tirador.getTipo());
     }
     @Test
-    public void luchador_debe_dar_puntaje() {
+    public void luchador_debe_dar_puntaje_Boxeador() {
         Boxeador boxeador = new Boxeador("boxear");
         boxeador.setFuerza(1);
         boxeador.setresistencia(1);
         boxeador.setDestreza(1);
         Assert.assertEquals(3, boxeador.pelear());
+    }
+    @Test
+    public void luchador_debe_dar_puntaje_Yudoka() {
+        Yudoka yudoka = new Yudoka("Yudoka");
+        yudoka.setFuerza(1);
+        yudoka.setresistencia(1);
+        yudoka.setDestreza(1);
+        Assert.assertEquals(3, yudoka.pelear());
     }
 }
