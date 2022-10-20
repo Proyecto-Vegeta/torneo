@@ -17,6 +17,6 @@ public class PrintComparable extends OutputStream {
 
     public String impreso() {
         byte[] bytes = Bytes.toArray(list);
-        return new String(bytes);
+        return new String(bytes).replaceAll("(\\r|\\n)", "");
     }
 }
