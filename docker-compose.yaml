@@ -4,15 +4,15 @@ services:
     build: .
     image: torneo
     ports:
-      - 8080:8080
+      - 8082:8080
 
   db:
     image: mariadb:10.3
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: torneo
-    volumes:
-      - ${PWD}/mariadb:/var/lib/mysql
+    #volumes:
+    #  - ${PWD}/mariadb:/var/lib/mysql
 
   dbadmin:
     image: phpmyadmin
