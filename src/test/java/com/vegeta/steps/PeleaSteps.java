@@ -38,7 +38,7 @@ public class PeleaSteps {
             Luchador2_puntuacion = 2 * Luchador2_destreza + Luchador2_fuerza;
         }
     }
-    @When("$Luchador1_nombre pelea contra $Luchador2_nombre")
+    @When("$Luchador1_nombre con $Luchador1_puntuacion puntos pelea contra $Luchador2_nombre con $Luchador2_puntuacion puntos")
     public void LuchadoresPelean(String Luchador1_nombre, int Luchador1_puntuacion, String Luchador2_nombre, int Luchador2_puntuacion) {
         if (Luchador1_puntuacion>Luchador2_puntuacion) {
             Ganador = Luchador1_nombre;
