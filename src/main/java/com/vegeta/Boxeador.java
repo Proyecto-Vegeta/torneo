@@ -16,5 +16,4 @@ public class Boxeador extends Luchador {
         return 2*getFuerza()+getresistencia();
 
     }
-
 }
