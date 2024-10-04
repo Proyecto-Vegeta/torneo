@@ -47,4 +47,49 @@ public class LuchadorTest {
         boxeador.setDestreza(1);
         Assert.assertEquals(3, boxeador.pelear());
     }
+
+    @Test
+    public void un_luchador_tipo_capoeira() {
+        Capoeira capoeira = new Capoeira("Chiquinha");
+        capoeira.setFuerza(1);
+        capoeira.setresistencia(1);
+        capoeira.setDestreza(1);
+        Assert.assertEquals(4, capoeira.getTipo());
+    }
+
+    @Test
+    public void capoeira_debe_dar_puntaje() {
+        Capoeira capoeira = new Capoeira("Miku");
+        capoeira.setFuerza(1);
+        capoeira.setresistencia(1);
+        capoeira.setDestreza(1);
+        Assert.assertEquals(3, capoeira.pelear());
+    }
+
+    @Test
+    public void capoeira_debe_vencer_a_boxeador() {
+        Luchador luchador1 = new Capoeira("Chun Li");
+        luchador1.setFuerza(4);
+        luchador1.setresistencia(8);
+        luchador1.setDestreza(10);
+        Luchador luchador2 = new Boxeador("Balrog");
+        luchador2.setFuerza(10);
+        luchador2.setresistencia(7);
+        luchador2.setDestreza(7);
+        Pelea pelea = new Pelea();
+        Assert.assertEquals(1, pelea.enfrentar(luchador1, luchador2));
+    }
+    @Test
+    public void capoeira_debe_perder_contra_yudoka() {
+        Luchador luchador1 = new Capoeira("Chun Li");
+        luchador1.setFuerza(4);
+        luchador1.setresistencia(8);
+        luchador1.setDestreza(10);
+        Luchador luchador2 = new Yudoka("Ryu");
+        luchador2.setFuerza(7);
+        luchador2.setresistencia(10);
+        luchador2.setDestreza(9);
+        Pelea pelea = new Pelea();
+        Assert.assertEquals(2, pelea.enfrentar(luchador1, luchador2));
+    }
 }

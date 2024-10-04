@@ -10,7 +10,7 @@ public class Pelea {
             ganador = 1;
         }
         if (luchador1.pelear() < luchador2.pelear()) {
-            System.out.println("gano "+ luchador2.getNombre());
+            System.out.println("gana "+ luchador2.getNombre());
             ganador = 2;
         }
         if (luchador1.pelear() == luchador2.pelear()) {
